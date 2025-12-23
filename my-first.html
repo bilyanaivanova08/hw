@@ -1,6 +1,59 @@
 <html>
-<body>
+<head>
 
+
+<style>
+body {
+  font-family: verdana;
+background-color: #f4f4f4;
+padding: 50px;
+}
+
+h1, h2 {
+  color: #333;
+}
+
+header {
+  background-color: #f1f1f1;
+  text-align: center;
+  padding: 10px;
+}
+form {
+background: white;
+padding: 20px;
+max-width: 400px;
+border-radius: 5px;
+}
+
+input, textarea, button {
+width: 100%;
+margin-bottom: 10px;
+padding: 8px;
+}
+
+button {
+background-color: #333;
+color: white;
+border: none;
+cursor: pointer;
+}
+
+#result {
+margin-top: 10px;
+font-weight: bold;
+}
+
+.media {
+margin-top: 30px;
+}
+</style>
+</head>
+
+<body>
+<header>
+    <h1>HW</h1>
+  </header>
+  <body>
 <h1>About me</h1>
 <h2>Bilyana Ivanova me</h2>
     <br>
@@ -10,25 +63,26 @@
 
 <br>
 <br>
-<br>
-<br>
 
-<img src="https://media.istockphoto.com/id/814423752/photo/eye-of-model-with-colorful-art-make-up-close-up.jpg?s=612x612&w=0&k=20&c=l15OdMWjgCKycMMShP8UK94ELVlEGvt7GmB_esHWPYE=" alt="Italian Trulli">
+
+<img src="https://media.istockphoto.com/id/814423752/photo/eye-of-model-with-colorful-art-make-up-close-up.jpg?s=612x612&w=0&k=20&c=l15OdMWjgCKycMMShP8UK94ELVlEGvt7GmB_esHWPYE=" alt="Italian Trulli" width="300">
 
 <br>
 <br>
-
+ <p>Goals</p>
 <ul>
     <li>google site</li>
     <li>study html</li>
   </ul>
 
+ <br><br>
+    
+    <p>Here is link to the first page of google</p>
   <a href="https://www.google.com/">google link</a>
 
   <br>
   <br>
-  <br>
-  <br>
+
 
   <footer>
     <p>Author: Bilyana Ivanova</p>
@@ -36,9 +90,6 @@
   </footer>
   <br>
   <br>
-  <br>
-  <br>
-
   <table>
     <tr>
       <th>Knowedge</th>
@@ -49,7 +100,66 @@
       <td>3 years</td>
     </tr>
   </table>
+ <br><br>
+<hr>
+
+<h2>Contact Me</h2>
+
+<form id="contactForm">
+<input type="text" id="firstName" placeholder="First Name">
+<input type="text" id="lastName" placeholder="Last Name">
+<input type="number" id="age" placeholder="Age">
+<input type="email" id="email" placeholder="Email">
+<textarea id="message" placeholder="Message"></textarea>
+
+<button type="button" onclick="validateForm()">Submit</button>
+
+<div id="result"></div>
+</form>
+
+
+<div class="media">
+<h2>Video</h2>
+<iframe width="320"
+src="https://v.ftcdn.net/04/30/43/21/700_F_430432179_dM2hRAHLenC0uwA8eQjTSbYivM6yRPyv_ST.mp4"  >
+</iframe>
+
+<h2>Audio</h2>
+<audio controls>
+<source src="audiosea.mp3" >
+</audio>
+</div>
+
+
+<script>
+function validateForm() {
+const firstName = document.getElementById("firstName").value;
+const lastName = document.getElementById("lastName").value;
+const age = Number(document.getElementById("age").value);
+const email = document.getElementById("email").value;
+
+let isValid = true;
+
+if (firstName.length >= 20 || lastName.length >= 20) {
+isValid = false;
+}
+
+if (age < 18 || age > 100) {
+isValid = false;
+}
+
+if (!email.includes("@") || !email.includes(".")) {
+isValid = false;
+}
+
+const result = document.getElementById("result");
+result.textContent = isValid ? "OKAY" : "NOT OKAY";
+result.style.color = isValid ? "green" : "red";
+}
+</script>
+
 
 </body>
 </html>
+
 
