@@ -1,6 +1,6 @@
-<html>
+<!DOCTYPE html>
 <head>
-
+<title>About Me – Bilyana Ivanova</title>
 
 <style>
 body {
@@ -52,8 +52,7 @@ margin-top: 30px;
 <body>
 <header>
     <h1>HW</h1>
-  </header>
-  <body>
+</header>
 <h1>About me</h1>
 <h2>Bilyana Ivanova me</h2>
     <br>
@@ -86,7 +85,7 @@ margin-top: 30px;
 
   <footer>
     <p>Author: Bilyana Ivanova</p>
-    <p><a href="bilyanavivanova@gmail.com">bilyanavivanova@gmail.com</a></p>
+    <p><a href="mailto:bilyanavivanova@gmail.com">bilyanavivanova@gmail.com</a></p>
   </footer>
   <br>
   <br>
@@ -106,10 +105,10 @@ margin-top: 30px;
 <h2>Contact Me</h2>
 
 <form id="contactForm">
-<input type="text" id="firstName" placeholder="First Name">
-<input type="text" id="lastName" placeholder="Last Name">
-<input type="number" id="age" placeholder="Age">
-<input type="email" id="email" placeholder="Email">
+<input type="text" id="firstName" name="firstName" placeholder="First Name">
+<input type="text" id="lastName" name="lastName" placeholder="Last Name">
+<input type="number" id="age" name="age" placeholder="Age">
+<input type="email" id="email" name="email" placeholder="Email">
 <textarea id="message" placeholder="Message"></textarea>
 
 <button type="button" onclick="validateForm()">Submit</button>
@@ -120,13 +119,13 @@ margin-top: 30px;
 
 <div class="media">
 <h2>Video</h2>
-<iframe width="320"
-src="https://v.ftcdn.net/04/30/43/21/700_F_430432179_dM2hRAHLenC0uwA8eQjTSbYivM6yRPyv_ST.mp4"  >
-</iframe>
+<video width="320" controls>
+  <source src="https://v.ftcdn.net/04/30/43/21/700_F_430432179_dM2hRAHLenC0uwA8eQjTSbYivM6yRPyv_ST.mp4" type="video/mp4">
+</video>
 
 <h2>Audio</h2>
 <audio controls>
-<source src="audiosea.mp3" >
+<source src="https://raw.githubusercontent.com/bilyanaivanova08/hw/main/audiosea.mp3" type="audio/mpeg">
 </audio>
 </div>
 
@@ -161,5 +160,3 @@ result.style.color = isValid ? "green" : "red";
 
 </body>
 </html>
-
-
