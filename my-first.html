@@ -104,14 +104,18 @@ margin-top: 30px;
 
 <h2>Contact Me</h2>
 
-<form id="contactForm">
+<form 
+action="mailto:bilyanavivanova@gmail.com"
+method="post"
+enctype="text/plain"
+>
 <input type="text" id="firstName" name="firstName" placeholder="First Name">
 <input type="text" id="lastName" name="lastName" placeholder="Last Name">
 <input type="number" id="age" name="age" placeholder="Age">
 <input type="email" id="email" name="email" placeholder="Email">
 <textarea id="message" placeholder="Message"></textarea>
 
-<button type="button" onclick="validateForm()">Submit</button>
+<button type="submit" onclick="validateForm()">Submit</button>
 
 <div id="result"></div>
 </form>
@@ -160,4 +164,3 @@ result.style.color = isValid ? "green" : "red";
 
 </body>
 </html>
-
